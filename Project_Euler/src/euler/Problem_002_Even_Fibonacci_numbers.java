@@ -14,17 +14,18 @@ package euler;
 
 public class Problem_002_Even_Fibonacci_numbers {
 	public static void main(String [] args){
-		int total = 0;
 		int max   = 4000000;
+		int total = 0;
 		int fib_1 = 1;
 		int fib_2 = 2;
 		
-		while(fib_2 < max){
-			if(fib_2 % 2 == 0) total += fib_2;
+		while(fib_2 < max){		// The second Fibonacci number will always be bigger
+			if(fib_2 % 2 == 0) 	// No need to check first number unless we start 
+				total += fib_2;	// with a different number other than 1. 
 			
-			int temp = fib_2;
-			fib_2 += fib_1;
-			fib_1 = temp;
+			int temp = fib_2;	
+			fib_2 += fib_1;		// new fib_2 
+			fib_1 = temp;		// new fib_1
 		}
 		
 		System.out.println(total);
