@@ -12,9 +12,9 @@ public class Problem_004_Largest_palindrome_product {
 
 	public static void main(String[] args){
 		/*
-		 * We know the largest 2 digit palindrome is 9009 so that is a starting point. 
-		 * I wanted to get the product of the largest numbers first, thats why py = px
-		 * As seen below, I only care about the numbers shown, blank slots are ignored.
+		 * We know the largest 2 digit palindrome is 9009. 
+		 * I wanted to get the product of the largest numbers first, thats why py = 999
+		 * As seen below, I only care about the numbers shown, blank slots are ignored products.
 		 * py
 		 * 
 		 * 3|      9 
@@ -26,7 +26,7 @@ public class Problem_004_Largest_palindrome_product {
 		 */
 		int largest_palindrome = 9009;
 		for(int px = 999;px > 100; px--){
-			for(int py = px; py < 1000; py++){
+			for(int py = 999; py >= px; py--){
 				// check if the product is a palindrome and whether its the largest
 				int poss_palindrome = py * px;
 				if(is_palindrome(poss_palindrome) && largest_palindrome < poss_palindrome){
