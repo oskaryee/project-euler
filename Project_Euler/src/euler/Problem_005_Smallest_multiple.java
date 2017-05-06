@@ -15,6 +15,9 @@ public class Problem_005_Smallest_multiple {
 		 * 
 		 * I also believe there are high profile numbers, these are numbers between 11 through 20. 
 		 * If a number is divisible by high profile numbers then low profile numbers shouldn't be an issue.
+		 * 
+		 * Wanted to make sure I would get the correct result for that I started with what I knew. 
+		 * Since I knew the smallest multiple for 10, I made sure my method could get the correct answer then try with 20.
 		 */
 		
 		int test_min = 210;
@@ -29,19 +32,16 @@ public class Problem_005_Smallest_multiple {
 		
 		
 		
-		
 		int min = 9699690 + 10,
 		
 		    max = Integer.MAX_VALUE;
 		
 		int [] primes = {2, 3, 5, 7, 11, 13, 17, 19},
 				
-		 high_profile = {20, 18, 16, 15, 14, 12}; 
+		       high_profile = {20, 18, 16, 15, 14, 12}; 
 		
 		System.out.println("Smallest multiple: " + smallest_multiple(min, max, 20, primes, high_profile));
-		
-		System.out.println("Smallest multiple: " + Integer.MAX_VALUE);
-		
+				
 	}
 	
 	public static boolean check(int [] array, int n){
@@ -78,5 +78,4 @@ public class Problem_005_Smallest_multiple {
 		return multiple;
 	}
 	
-
 }
