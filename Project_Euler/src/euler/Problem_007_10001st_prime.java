@@ -59,7 +59,7 @@ public class Problem_007_10001st_prime {
 	}
 	
 	public static boolean check_if_prime(int n, Stack<Integer> primes){
-		
+				
 		int max = n / 2 + 1;
 		
 		// This was the main reason I didn't enjoy the stack method too much
